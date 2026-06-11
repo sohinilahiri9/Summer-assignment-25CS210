@@ -1,16 +1,11 @@
-start = int(input("Enter start of range: "))
-end = int(input("Enter end of range: "))
+n = int(input("Enter n: "))
 
-print(f"Prime numbers between {start} and {end}:")
-for num in range(start, end + 1):
-    if num < 2:
-        continue
-    
-    is_prime = True
-    for i in range(2, int(num**0.5) + 1):
-        if num % i == 0:
-            is_prime = False
-            break
-    
-    if is_prime:
-        print(num, end=" ")
+a, b = 0, 1
+if n == 1:
+    print(f"{n}th Fibonacci term is {a}")
+elif n == 2:
+    print(f"{n}th Fibonacci term is {b}")
+else:
+    for i in range(3, n + 1):
+        a, b = b, a + b
+    print(f"{n}th Fibonacci term is {b}")

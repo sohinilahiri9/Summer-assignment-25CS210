@@ -1,15 +1,7 @@
-num = int(input("Enter a number: "))
+n = int(input("Enter number of terms: "))
 
-if num < 2:
-    print(f"{num} is not a prime number")
-else:
-    is_prime = True
-    for i in range(2, int(num**0.5) + 1):
-        if num % i == 0:
-            is_prime = False
-            break
-    
-    if is_prime:
-        print(f"{num} is a prime number")
-    else:
-        print(f"{num} is not a prime number")
+a, b = 0, 1
+print("Fibonacci series:")
+for i in range(n):
+    print(a, end=" ")
+    a, b = b, a + b

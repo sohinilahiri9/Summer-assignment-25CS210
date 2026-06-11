@@ -1,9 +1,13 @@
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
+num = int(input("Enter a number: "))
+temp = num
+sum_digits = 0
 
-def gcd(x, y):
-    while y:
-        x, y = y, x % y
-    return x
+while temp > 0:
+    digit = temp % 10
+    sum_digits += digit ** 3
+    temp //= 10
 
-print(f"GCD of {a} and {b} is {gcd(a, b)}")
+if num == sum_digits:
+    print(f"{num} is an Armstrong number")
+else:
+    print(f"{num} is not an Armstrong number")

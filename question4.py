@@ -1,10 +1,15 @@
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
+start = int(input("Enter start of range: "))
+end = int(input("Enter end of range: "))
 
-def gcd(x, y):
-    while y:
-        x, y = y, x % y
-    return x
-
-lcm = abs(a * b) // gcd(a, b)
-print(f"LCM of {a} and {b} is {lcm}")
+print(f"Armstrong numbers between {start} and {end}:")
+for num in range(start, end + 1):
+    temp = num
+    sum_digits = 0
+    
+    while temp > 0:
+        digit = temp % 10
+        sum_digits += digit ** 3
+        temp //= 10
+    
+    if num == sum_digits:
+        print(num, end=" ")
