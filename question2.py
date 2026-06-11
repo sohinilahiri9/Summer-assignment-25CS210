@@ -1,11 +1,18 @@
-# Function to find max
-def find_max(x, y):
-    if x > y:
-        return x
-    else:
-        return y
 
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
+num = int(input("Enter a number: "))
 
-print("Maximum =", find_max(a, b))
+temp = num
+
+reverse = 0
+
+while num > 0:
+
+digit = num % 10
+
+2
+
+reverse = reverse * 10 + digit
+
+num //= 10
+
+print(f"Reverse of {temp} = {reverse}")

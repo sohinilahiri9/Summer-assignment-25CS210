@@ -1,9 +1,15 @@
-# Function to add two numbers
-def add(a, b):
-    return a + b
+num = int(input("Enter a number: "))
 
-num1 = int(input("Enter first number: "))
-num2 = int(input("Enter second number: "))
+temp = num
 
-result = add(num1, num2)
-print("Sum =", result)
+sum_digits = 0
+
+while num > 0:
+
+digit = num % 10
+
+sum_digits += digit
+
+num //= 10
+
+print(f"Sum of digits of {temp} = {sum_digits}")

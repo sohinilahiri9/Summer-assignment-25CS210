@@ -1,15 +1,12 @@
-# Function to check prime
-def is_prime(n):
-    if n <= 1:
-        return False
-    for i in range(2, n):
-        if n % i == 0:
-            return False
-    return True
-
 num = int(input("Enter a number: "))
+temp = abs(num)
+product = 1
 
-if is_prime(num):
-    print(num, "is Prime")
+if temp == 0:
+    product = 0
 else:
-    print(num, "is Not Prime")
+    while temp > 0:
+        product *= temp % 10
+        temp //= 10
+
+print(f"Product of digits of {num} = {product}")

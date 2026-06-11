@@ -1,10 +1,13 @@
-# Function to find factorial
-def factorial(n):
-    fact = 1
-    for i in range(1, n+1):
-        fact = fact * i
-    return fact
-
 num = int(input("Enter a number: "))
+temp = abs(num)
+reverse = 0
+original = temp
 
-print("Factorial of", num, "=", factorial(num))
+while temp > 0:
+    reverse = reverse * 10 + temp % 10
+    temp //= 10
+
+if original == reverse:
+    print(f"{num} is a palindrome")
+else:
+    print(f"{num} is not a palindrome")
