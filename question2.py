@@ -1,18 +1,16 @@
+start = int(input("Enter start of range: "))
+end = int(input("Enter end of range: "))
 
-num = int(input("Enter a number: "))
-
-temp = num
-
-reverse = 0
-
-while num > 0:
-
-digit = num % 10
-
-2
-
-reverse = reverse * 10 + digit
-
-num //= 10
-
-print(f"Reverse of {temp} = {reverse}")
+print(f"Prime numbers between {start} and {end}:")
+for num in range(start, end + 1):
+    if num < 2:
+        continue
+    
+    is_prime = True
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    
+    if is_prime:
+        print(num, end=" ")

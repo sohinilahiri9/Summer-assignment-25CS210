@@ -1,13 +1,10 @@
-num = int(input("Enter a number: "))
-temp = abs(num)
-reverse = 0
-original = temp
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
 
-while temp > 0:
-    reverse = reverse * 10 + temp % 10
-    temp //= 10
+def gcd(x, y):
+    while y:
+        x, y = y, x % y
+    return x
 
-if original == reverse:
-    print(f"{num} is a palindrome")
-else:
-    print(f"{num} is not a palindrome")
+lcm = abs(a * b) // gcd(a, b)
+print(f"LCM of {a} and {b} is {lcm}")

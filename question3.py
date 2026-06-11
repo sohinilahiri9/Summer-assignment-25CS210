@@ -1,12 +1,9 @@
-num = int(input("Enter a number: "))
-temp = abs(num)
-product = 1
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
 
-if temp == 0:
-    product = 0
-else:
-    while temp > 0:
-        product *= temp % 10
-        temp //= 10
+def gcd(x, y):
+    while y:
+        x, y = y, x % y
+    return x
 
-print(f"Product of digits of {num} = {product}")
+print(f"GCD of {a} and {b} is {gcd(a, b)}")
