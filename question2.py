@@ -1,11 +1,15 @@
-n = int(input("Enter n: "))
+import math
 
-a, b = 0, 1
-if n == 1:
-    print(f"{n}th Fibonacci term is {a}")
-elif n == 2:
-    print(f"{n}th Fibonacci term is {b}")
+num = int(input("Enter a number: "))
+temp = num
+sum_fact = 0
+
+while temp > 0:
+    digit = temp % 10
+    sum_fact += math.factorial(digit)
+    temp //= 10
+
+if sum_fact == num:
+    print(f"{num} is a strong number")
 else:
-    for i in range(3, n + 1):
-        a, b = b, a + b
-    print(f"{n}th Fibonacci term is {b}")
+    print(f"{num} is not a strong number")

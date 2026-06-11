@@ -1,13 +1,6 @@
 num = int(input("Enter a number: "))
-temp = num
-sum_digits = 0
+print(f"Factors of {num} are:")
 
-while temp > 0:
-    digit = temp % 10
-    sum_digits += digit ** 3
-    temp //= 10
-
-if num == sum_digits:
-    print(f"{num} is an Armstrong number")
-else:
-    print(f"{num} is not an Armstrong number")
+for i in range(1, num + 1):
+    if num % i == 0:
+        print(i, end=" ")

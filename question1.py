@@ -1,7 +1,11 @@
-n = int(input("Enter number of terms: "))
+num = int(input("Enter a number: "))
+sum_div = 0
 
-a, b = 0, 1
-print("Fibonacci series:")
-for i in range(n):
-    print(a, end=" ")
-    a, b = b, a + b
+for i in range(1, num):
+    if num % i == 0:
+        sum_div += i
+
+if sum_div == num:
+    print(f"{num} is a perfect number")
+else:
+    print(f"{num} is not a perfect number")
