@@ -1,15 +1,13 @@
 num = int(input("Enter a number: "))
+temp = abs(num)
+reverse = 0
+original = temp
 
-temp = num
+while temp > 0:
+    reverse = reverse * 10 + temp % 10
+    temp //= 10
 
-sum_digits = 0
-
-while num > 0:
-
-digit = num % 10
-
-sum_digits += digit
-
-num //= 10
-
-print(f"Sum of digits of {temp} = {sum_digits}")
+if original == reverse:
+    print(f"{num} is a palindrome")
+else:
+    print(f"{num} is not a palindrome")
